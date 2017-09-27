@@ -1,0 +1,249 @@
+@charset "utf-8";
+
+/* form 表单元素 */
+.input-text{ box-sizing:border-box; width: 100%; background-color:#FFFFFF; background-image:none; border:1px solid #d9d9d9; color:#5b5b60; padding:5px 6px; height: 30px; font-size:12px; line-height:18px; -webkit-appearance:none; -moz-appearance:none; appearance:none; }
+.input-icon{ position: relative; display: block;}
+.input-icon .input-text{ padding-left: 32px;}
+.input-icon i{ display: block; position: absolute; left: 6px; top: 50%; margin-top: -10px; width: 20px; height: 20px;}
+.input-focus{ border-color:#30b8fc;}
+.input-error{ border-color:#ff0;}
+.input-big{ padding: 8px 6px; height: 36px;}
+.search .input-text{ margin: 0 3px 0 -1px}
+input.input-text:disabled{ background-color: #f2f2f2;}
+
+.input-data{ padding-right: 28px; width: 138px; cursor:pointer; background: url(../../images/icon/icon_date.png) no-repeat right center}
+.textarea{ box-sizing:border-box; width: 100%; background-color:#FFFFFF; background-image:none; border:1px solid #c8c7cc; color:#5b5b60; padding:5px 6px; font-size:12px; line-height:18px; -webkit-appearance:none; -moz-appearance:none; appearance:none; 
+height: 55px;}
+
+/* checkbox */
+.checkbox input{ display: none;}
+.checkbox label, .checkbox span{ cursor:pointer; display:inline-block; font-size:12px; padding-left:18px; position:relative; line-height:16px; transition:border 0.2s linear 0s,color 0.2s linear 0s; white-space:nowrap; cursor:pointer; }
+.checkbox label:before, .checkbox span:before{ background-color:#ffffff; border:1px solid #d9d9d9; content:""; display:inline-block; height:12px; left:0; margin-right:10px; position:absolute; width:12px; border-radius:0; top:3px; transition:border 0.2s linear 0s,color 0.2s linear 0s; box-sizing:border-box;}
+.checkbox label:after, .checkbox span:after{ display:inline-block; font-size:11px; height:12px; left:4px; position:absolute; top:-1px; transition:border 0.2s linear 0s,color 0.2s linear 0s; width:12px; box-sizing:border-box;}
+.checkbox input[type="checkbox"]:checked + label:before,
+.checkbox input[type="checkbox"]:checked + span:before{ border-width:6px; border-color: #ff7713;}
+.checkbox input[type="checkbox"]:checked + label:after,
+.checkbox input[type="checkbox"]:checked + span:after{ content: ''; width: 8px; height: 5px; position: absolute; top: 5px;left: 2px; border: 2px solid #fff; border-top: none; border-right: none; background: transparent; -moz-transform: rotate(-45deg);-ms-transform: rotate(-45deg); -webkit-transform: rotate(-45deg); transform: rotate(-45deg);}
+.checked-sub label:after,.checked-sub span:after{ content: ''; width: 0px; height: 0px; position: absolute; top: 6px;left: 3px; border: 3px solid #ff7713; }
+.checkbox input[type="checkbox"]:disabled + label:before,
+.checkbox input[type="checkbox"]:disabled + span:before{ border-color: #d9d9d9; background-color: #f2f2f2;}
+
+/* checkbox big 偏大的多选框 */
+.checkboxBig input{ display: none;}
+.checkboxBig label, .checkboxBig span{ cursor:pointer; font-size:12px; padding-left:20px; position:relative; line-height:16px; transition:border 0.2s linear 0s,color 0.2s linear 0s; white-space:nowrap; cursor:pointer; }
+.checkboxBig label:before, .checkboxBig span:before{ background-color:#ffffff; border:1px solid #ccc; content:""; display:inline-block; height:16px; left:0; margin-right:10px; position:absolute; width:16px; border-radius:0; top:0px; transition:border 0.2s linear 0s,color 0.2s linear 0s; box-sizing:border-box;}
+.checkboxBig label:after, .checkboxBig span:after{ display:inline-block; font-size:12px; height:16px; position:absolute; transition:border 0.2s linear 0s,color 0.2s linear 0s; width:16px; box-sizing:border-box;}
+.checkboxBig input[type="checkbox"]:checked + label:before,
+.checkboxBig input[type="checkbox"]:checked + span:before{ border-width:8px; border-color: #ff7713;}
+.checkboxBig input[type="checkbox"]:checked + label:after,
+.checkboxBig input[type="checkbox"]:checked + span:after{ content: ''; width: 10px; height: 6px; position: absolute; top: 3px;left: 3px;  border: 2px solid #fff; border-top: none; border-right: none; background: transparent; -moz-transform: rotate(-45deg);-ms-transform: rotate(-45deg); -webkit-transform: rotate(-45deg); transform: rotate(-45deg);}
+.checkboxBig input[type="checkbox"]:disabled + label:before,
+.checkboxBig input[type="checkbox"]:disabled + span:before{ border-color: #d9d9d9; background-color: #f2f2f2;}
+
+/* radio */
+.radio input{ display: none;}
+.radio label, .radio span{ cursor:pointer; display:inline-block; font-size:12px; padding-left:20px; position:relative; line-height:16px; white-space:nowrap; cursor:pointer; }
+.radio label:before, .radio span:before{ background-color:#ffffff; border:1px solid #d9d9d9; content:""; display:inline-block; height:16px; left:0; position:absolute; width:16px; border-radius:50%; top:0px; box-sizing:border-box;}
+.radio label:after, .radio span:after{ display:inline-block; height:16px; left:4px; position:absolute; top:-1px; width:16px; box-sizing:border-box;}
+.radio input[type="radio"]:checked + label:after,
+.radio input[type="radio"]:checked + span:after{ content: ''; width: 0px; height: 0px; position: absolute; top: 5px;left: 5px; border: 3px solid #ff7713; border-radius:50%;}
+.radio input[type="radio"]:disabled + label:before,
+.radio input[type="radio"]:disabled + span:before{ background-color:#f2f2f2;}
+
+/* radio 单选列表 */
+.radio-list .radio{ float: left; margin-right: 40px;}
+.radio-list .radio:last-child{ margin-right: 0;}
+
+/* btn 按钮*/
+.btn{ box-sizing:border-box; display: block; min-width: 70px; height: 30px; padding: 6px 12px; line-height: 18px; border-radius: 2px; background-color: #ff7713; text-align: center; color: #fff; text-align: center; font-size: 14px; border:0; -webkit-appearance:none; -moz-appearance:none; appearance:none;}
+.btn-big{ height: 36px; padding: 9px 12px; border-radius: 4px;}
+.btn-green{ background-color: #8acf31;}
+.btn-yellow{ background-color: #ffaa31;}
+.btn-gray{ border: 1px solid #ccc; background-color: #f7f7f7; color: #333}
+.btn-group .btn{ float: left; margin-left: 3px;}
+.btn-pop{ display: inline-block;}
+.btn-pop .btn{ float: left; margin: 0 5px}
+
+/* btn-icon 按钮图标*/
+.btn-icon-add{ float: left; width: 16px; height: 16px; margin: 1px 5px 0 0; background: url(../../images/icon/icon_operate.png) no-repeat -42px -2px}
+
+/* select 下拉控件 */
+.select{ position:relative; width: 100%; background-color: #fff;}
+.select-border{ display:block; position:relative; width:100%; height:30px; border:1px solid #ced3d9; cursor:pointer ;background-color:#fff; box-sizing:border-box;}
+.select-text{ box-sizing:border-box; display: block; position:absolute; right:0px; top:0px; z-index: 2; line-height: 18px; width: 100%; padding: 5px; border:0; background: transparent; }
+.select-icon{ position:absolute; right:0px; top:0px; display:block; width:16px; height:16px; padding:6px 5px; cursor:pointer; }
+.select-icon-arrow{ display: block; width: 0; margin:7px 0 0 4px; border:4px solid #fff; border-width:5px 4px; border-top-color: #656565;}
+.select-sub{ position:absolute; left:0; top:29px; z-index:100; display:none; width:100%; border:1px solid #ced3d9;  max-height: 280px; overflow-y:auto; background-color:#fff; box-sizing:border-box;}
+.select-sub a{ display:block; height:28px; padding-left:6px; line-height:28px; color:#404040; text-decoration:none}
+.select-sub a:hover{ color:#fff; background-color:#ff7713}
+.select-on .select-sub{ display: block;}
+
+/* 加减数 */
+.count-box{ position: relative;}
+.count{ position: absolute; right: 0; top: 1px; width: 24px; height: 28px}
+.count-up{ display: block; padding: 0 8px 4px; width: 0; height: 10px; cursor: pointer;}
+.count-down{ display: block; padding: 4px 8px 0; width: 0; height: 10px; cursor: pointer;}
+.count i{ display: block; width: 0; border: 4px solid #fff; border-width: 5px 4px; border-bottom-color: #656565}
+.count-down i{ border-bottom-color: #fff; border-top-color: #656565}
+
+/* toolbar */
+.toolbar{ height: 40px; background-color: #f1f1f1;}
+.toolbar-tab li{ float: left;}
+.toolbar-tab a{ display: block; height: 40px; padding: 0 35px; line-height: 40px; color: #333}
+.toolbar-tab a:hover, .toolbar-tab .toolbar-tab-on a{ background-color: #ff7713; color: #fff}
+
+.tab{ position: relative; height: 30px}
+.tab ul{ position: absolute; left: 0; top: 0; z-index: 2}
+.tab li{ float: left;}
+.tab a{ display: block; height: 28px; padding: 0 25px; line-height: 28px; color: #333}
+.tab a:hover, .tab .tab-on a{ border-bottom: 2px solid #ff7713; color: #ff7713}
+.tab-bottom-line{ position: absolute; bottom: 0; left: 0; width: 100%; height: 0; border-bottom: 2px solid #dcdcdc;}
+
+.tab-sm{ position: relative; height: 36px}
+.tab-sm ul{ position: absolute; left: 0; top: 0; z-index: 2}
+.tab-sm li{ float: left; padding: 0 20px}
+.tab-sm a{ display: block; height: 33px; padding: 3px 21px 0; line-height: 33px; color: #333; font-size: 14px}
+.tab-sm a:hover, .tab-sm .tab-sm-on a{ padding: 0 20px; border: 1px solid #ff7713; border-width:3px 1px 0; color: #ff7713; background-color: #fff;}
+.tab-sm-bottom-line{ position: absolute; bottom: 0; left: 0; width: 100%; height: 0; border-bottom: 1px solid #ff7713;}
+
+/* 多选框列表 */
+.checkbox-wrap{ position: relative; border-bottom: 1px dashed #dcdcdc; padding-left: 85px; min-height: 26px}
+.checkbox-list{ position: relative; margin-left: 85px;}
+.checkbox-list .checkbox{ float: left; margin-right: 40px; margin-bottom: 10px}
+.broker-text{ position: absolute; left: 0; top: 0;}
+.broker-list{}
+.broker-list a{ float: left; margin-right: 40px; margin-bottom: 10px; color: #333}
+.broker-list a.selected{ color: #ff7713}
+
+/* 表单布局 */
+.form-cell{ padding: 4px 6px 4px 0; line-height: 22px;}
+.cell-split{ padding-bottom: 15px;}
+.cell-split-s{ padding-bottom: 10px;}
+
+/* tips */
+.tips-wrap{ position: relative; width: 100%;}
+.tips-arrow{ position: relative; left: -4px; margin-left:50%; display: block; width: 0; border:4px solid #fff; border-width:5px 4px; border-bottom-color: #ff7713;}
+.tips-con{ box-sizing:border-box; width: 100%; padding: 10px 10px 0; border: 1px solid #ff7713; border-radius: 4px; background-color: #fff;}
+.tips-list{ position: relative; margin-left: 60px;}
+.tips-list .checkbox{ float: left; margin-right: 40px; margin-bottom: 10px}
+.tips-list .checkbox:last-child{ margin-right: 0;}
+
+/* loading */
+.loading,.loading-abs{ position: fixed; left: 50%; top: 100px; z-index: 9999; width: 200px; height: 74px; margin-left: -100px; box-shadow: 0 0 5px rgba(0,0,0,0.6); -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3); border-radius: 2px; border: 2px solid #ff7713 \0;}
+.loading-con{ width: 174px; height: 46px; padding: 14px 10px 14px 16px; background-color: #fff; }
+.loading-img{ float: left; width: 46px; height: 46px; margin-right: 12px;}
+.loading-img img{width: 39px; height: 39px; margin-top: 3px;}
+.loading-img i{ display: block; width: 42px; height: 42px; margin-top: 2px;}
+.loading-icon{ background: url(../../images/icon/loading.gif) no-repeat left center;}
+.loading-con p{ display: table-cell; vertical-align: middle; width: 116px; height: 46px; font-size: 14px}
+.loading-success, .loading-false{ background: url(../../images/icon/pop_state.png) no-repeat;}
+.loading-false{ background-position: -42px 0;}
+.loading-abs{ position: absolute;}
+
+/* table */
+.table-header{ height: 30px; border-bottom: 2px solid #dcdcdc; padding-bottom: 4px;}
+.table-wrap{ position: relative; border: 1px solid #dcdcdc; min-height: 280px; overflow-x: auto}
+.table-wrap th{ height: 30px; padding-left: 5px; border-bottom: 1px solid #dcdcdc; background-color: #f2f2f2;}
+.table-wrap td{ padding-left: 5px; border-bottom: 1px solid #dcdcdc;}
+.table-wrap tr:hover td{ background-color: #f2f2f2;}
+.no-data{ height: 250px; text-align: center; font-size: 14px;}
+.no-data span{ display: inline-block; width: 120px; height: 50px; padding-top: 70px; margin: 70px auto 0; text-align: center; color: #b2b2b2; text-shadow:1px 1px rgba(255,255,255,.9); background: url(../../images/icon/nodata.png) no-repeat center top;}
+
+/* sheet */
+.sheet th, .sheet td{ padding: 0 5px; border: 1px solid #d9d9d9; text-align: center}
+.sheet th.ta-l, .sheet td.ta-l, .sheet .ta-l td, .sheet .ta-l th{ text-align: left;}
+.sheet tr:hover td{ background-color: #fff9ee;}
+.thead th{ background-color: #f7f7f7;}
+
+/* grid */
+.grid-header{ height: 30px; padding-bottom: 4px;}
+.grid-table{ border: 1px solid #e6e6e6; border-bottom: 0;}
+.grid-table td{ padding-left: 10px; }
+.grid-table tr:hover td{ background-color: #f2f2f2;}
+.grid-cell{ border-bottom: 1px solid #e6e6e6}
+.tree-node{ padding-left: 18px;}
+.tree-node-collapse{ background: url(../../images/icon/icon_plus.png) no-repeat 0 3px; cursor: pointer;}
+.tree-node-expand{ background: url(../../images/icon/icon_minus.png) no-repeat 0 3px; cursor: pointer;}
+.tree-node-first{ padding-left: 30px;}
+
+.grid-operate{ float: right; padding:10px 30px 10px 0;}
+.grid-operate a{ float: left; width: 20px; height: 20px; margin-left: 30px;}
+.grid-operate i, .icon-op{ display: block; width: 20px; height: 20px; text-indent: -9999; background: url(../../images/icon/icon_operate.png) no-repeat}
+i.icon-op-add{ background-position: 0 0;}
+i.icon-op-link{ background-position: 0 -20px;}
+i.icon-op-edit{ background-position: 0 -40px;}
+i.icon-op-del{ background-position: 0 -60px;}
+i.icon-op-down{ background-position: 0 -80px;}
+i.icon-op-up{ background-position: 0 -100px;}
+i.icon-op-unlink{ background-position: 0 -120px;}
+i.icon-op-stop{ background-position: 0 -140px;}
+i.icon-op-restore{ background-position: 0 -160px;}
+i.icon-op-check{ background-position: -20px -180px;}
+
+a:hover i.icon-op-add{ background-position: -20px 0;}
+a:hover i.icon-op-link{ background-position: -20px -20px;}
+a:hover i.icon-op-edit{ background-position: -20px -40px;}
+a:hover i.icon-op-del{ background-position: -20px -60px;}
+a:hover i.icon-op-down{ background-position: -20px -80px;}
+a:hover i.icon-op-up{ background-position: -20px -100px;}
+a:hover i.icon-op-unlink{ background-position: -20px -120px;}
+a:hover i.icon-op-stop{ background-position: -20px -140px;}
+a:hover i.icon-op-restore{ background-position: -20px -160px;}
+
+
+/* templet set 模板设置 */
+.templet-set-pic{ float: left;}
+.templet-set-pic li{ float: left; width: 179px; height: 379px; margin:0 40px 20px 0;}
+.templet-set-pic img{ width: 149px; height: 263px;}
+.templet-set-pic a{ display: block; width: 149px; height: 263px; padding: 59px 14px 57px 16px; background: url(../../images/style/templet_bg.png) no-repeat;}
+.templet-set-pic a:hover{ background-position: -179px 0;}
+.templet-set-pic a:hover, .templet-set-pic a.selected{ background-position: -179px 0;}
+
+/* border-wrap */
+.border-wrap{ border: 1px solid #d9d9d9; padding: 10px 15px}
+.border{ border: 1px solid #d9d9d9;}
+
+/* upload */
+.upload-wrap{ float: left; position: relative; width: 136px; height: 68px; margin:6px 6px 0 0;}
+.upload-btn{ height: 66px; border: 1px dashed #ccc; background-color: #f7f7f7; cursor: pointer;}
+.upload-btn i{ display: block; width: 31px; height: 31px; margin: 18px 0 0 52px; background: url(../../images/icon/icon_add.png) no-repeat;}
+.upload-wrap img{ position: absolute; left: 0; top: 0; width: 136px; height: 68px;}
+
+/* 左侧内容列表 */
+.left-list{ position: relative; float: left; width: 300px; height: 450px; min-height: 450px; overflow-y: auto;}
+.left-list-bd{ position: absolute; top:0; right:0; height:100%; width: 0; border-right: 1px solid #d9d9d9;}
+.left-list ul{ position: relative; z-index: 2;}
+.left-list li{ height: 32px; padding: 0 10px 0 15px; cursor: pointer;}
+.left-list li:hover, .left-list li.selected{ background: #fff8ee url(../../images/icon/arrow_left_list.png) no-repeat right top;}
+.left-list-text{ float: left; width: 150px; line-height: 32px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis}
+.left-list-op a{ float: left; margin:6px 6px 0 0;}
+.left-list-con{ float: left; position: relative; width: 677px; padding: 8px 14px 14px 17px;}
+
+/*单选列表*/
+.switch{ padding: 2px; border-radius: 15px; width: 54px; height: 20px}
+.switch-on {background-color: #ff7713;}
+.switch-off {background-color: #ccc;}
+.switch-text { float: left; width: 34px; height: 20px; line-height: 20px; color: #fff; cursor: pointer; text-indent: 13px;}
+.switch-off .switch-text{float: right; text-indent: 8px;}
+.switch-white { float: left; border-radius: 2px; background-color: #fff; width: 20px; height: 20px; border-radius: 50%; text-indent: -9999px;}
+
+
+/* 分页 */     
+.pagination { height: 24px; line-height: 24px; margin-top: 10px;}
+.pagination-con a{ text-decoration:none; height: 22px; line-height: 22px; border:1px solid #fff; color:#666; }
+.pagination-con a,.pagination-con span{ float: left; padding:0 8px; margin-right:5px; line-height: 22px; }
+.pagination-con a:hover{ border:1px solid #ff7713;}
+.pagination-con .current{ background:#ff7713; color:#fff; border:1px solid #ff7713; }
+
+.pagination-con .prev i{ display: block; width: 0; height: 0; margin: 6px 0 0 -5px; border-top:5px solid #fff; border-bottom:5px solid #fff; border-left:4px solid #fff; border-right:4px solid #666; }
+.pagination-con .next i{ display: block; width: 0; height: 0; margin: 6px 0 0 5px; border-top:5px solid #fff; border-bottom:5px solid #fff; border-right:4px solid #fff; border-left:4px solid #666; }
+.pagination-con .current.prev, .pagination-con .current.next{ background-color: #fff; border:1px solid #fff;}
+.pagination-con .current.prev i{ border-right-color:#999;}
+.pagination-con .current.next i{ border-left-color:#999;}
+
+.pagination-input{ width: 36px; height: 18px; margin: 0 4px; border:1px solid #d9d9d9; padding:1px 5px; font-size:12px; line-height:18px; color:#333; background-color:#FFFFFF;}
+
+
+/* angular 设置，防止动态载入时发生闪动 */
+.ng-hide { display: none; }
+

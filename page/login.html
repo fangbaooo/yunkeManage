@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="email=no" />
+<link rel="stylesheet" type="text/css" href="../css/common/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/common/ui.css" />
+<link rel="stylesheet" type="text/css" href="../css/login.css" />
+<title>登录</title>
+</head>
+<body>
+<div class="login-head">
+        <div class="login-wrap">
+            <div class="login-logo"><a href="#" class="login-a"></a></div>
+            <div class="login-head-text c-gray">您好，欢迎使用云客运营平台！</div>
+        </div>
+    </div>
+    <!-- 内容 -->
+    <div class="login-container"> 
+        <div class="login-wrap" style="height:430px">
+            <div class="login-ad"><img src="../images/pic/ad.jpg" alt=""></div>
+            <div class="login-content">
+                <form action="" method="post" onsubmit="beforeSubmit();">
+                    <p class="c-gray f14" style="padding-bottom:8px">账号登录</p>
+					<div class="login-group">
+                        <span class="input-icon">
+                            <input type="text" class="input-text input-big" placeholder="企业号" id="user_name" name="" value=""><i class="icon-login-company"></i> </span>
+                    </div>
+                    <div class="login-group">
+                        <span class="input-icon">
+                            <input type="text" class="input-text input-big" placeholder="用户名" id="user_name" name="" value=""><i class="icon-login-user"></i></span>
+                    </div>
+                    <div class="login-group">
+                        <span class="input-icon">
+                            <input type="password" class="input-text input-big" placeholder="密码" id="password" value="">
+                            <i class="icon-login-pw"></i><input type="hidden" id="passwd_enc" name=""></span>
+                    </div>
+					<div class="login-group clearfix">
+                        <input type="text" class="input-text input-big" placeholder="验证码" id="" name="" value="" style="float:left; width:120px; margin-right:10px">
+                        <span class="verify-img"><img src="../images/login/verify.gif" alt=""></span>
+                        <span class="verify-text">换一张</span>
+                    </div>
+                    <p class="error-info" id="error_info" style="display:none">错误内容</p>
+                    <div class="checkbox">
+                        <input type="checkbox" id="remember" value="1">
+                        <label for="remember">记住登录账号</label>
+                    </div>
+                    <button id="login_btn" class="btn btn-big" style="display:block; width:100%; margin-top:15px">登录</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    <div class="login-btm">
+    	<div class="login-wrap">
+    		<div class="login-copy c-gray">
+    			<span class="btm-mr">Copyright &copy; 2015 明源云客</span>
+    			<span class="btm-mr">房地产O2O营销解决方案</span>
+    			<span class="btm-mr c-blue">400-1818-520&nbsp;&nbsp;&nbsp;</span>
+    			<span class="btm-mr btm-link"><a href="#">明源软件</a>|<a href="#">明源云客</a>|<a href="#">明源地产研究院</a></span>
+
+    		</div>
+    		<div class="login-ma-wrap c-gray">
+    			<div class="login-ma fl"><img src="../images/login/ma.jpg" alt=""><p>明源云客</p></div>
+    			<div class="login-ma fr"><img src="../images/login/ma.jpg" alt=""><p>明源地产研究院</p></div>
+    		</div>
+    	</div>
+    </div>
+
+    <!--<script type="text/javascript" src="/components/jquery.cookie/jquery.cookie.js"></script>  -->
+    <script type="text/javascript">        
+        function beforeSubmit()
+        {   
+            document.getElementById('passwd_enc').value = hex_md5(document.getElementById('password').value);
+            //记住登录账号
+            if ($("#remember").prop("checked")) {
+                var username = $("#user_name").val();
+                $.cookie("loginUsername", username, { expires: 7 });
+                $.cookie("loginRemember", true, { expires: 7 });
+            } else {
+                $.cookie('loginUsername', '', { expires: -1 });
+                $.cookie("loginRemember", false, { expires: 7 });
+            }
+
+            return true;
+        }
+
+        $(function () {
+            
+            $('#user_name').keypress(function (e) {
+                if (e.keyCode == 0x0A || e.keyCode == 0x0D) {
+                    if ($.trim(this.value)) {
+                        $('#password').focus();
+                    }
+                    e.preventDefault();
+                }
+            });
+
+            $('#password').keypress(function (e) {
+                if (e.keyCode == 0x0A || e.keyCode == 0x0D) {
+                    $('#login_btn').click();
+                    e.preventDefault();
+                }
+            });
+
+            var username = $.cookie("loginUsername");
+            if (username && username != 'null' && !$("#user_name").val()) {
+                $("#user_name").val(username);
+            }
+
+            var remember = $.cookie("loginRemember");
+            if (remember) {
+                $("#remember").prop("checked", true);
+            } else {
+                $("#remember").prop("checked", false);
+            }
+        });
+    </script> 
+</body>
+</html>
+

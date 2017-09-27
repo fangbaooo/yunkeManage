@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* reset */
+body,p,object,iframe,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,i,form,fieldset,legend,button,input,textarea,table,tr,th,td{ margin:0;padding:0;}
+fieldset,img{ border:0;}
+ul,ol{ list-style:none;}
+h1,h2,h3,h4,h5,h6{ font-size:1em; font-weight:normal}
+em{ font-style:normal;}
+table { border-collapse:collapse; border-spacing:0;}
+caption,th{ text-align:left; font-weight:normal}
+textarea{ resize:none;}
+label,button{ cursor:pointer}
+input,button,select,textarea{ font-family:"Microsoft YaHei", Arial, sans-serif; color: #444}
+:focus{ outline:none}
+a{ text-decoration:none;}
+a:hover { text-decoration:none;}
+i{ font-style:normal}
+input[type="button"],input[type="submit"],input[type="reset"]{-webkit-appearance:none; border-radius: 0;}
+input[type="number"]::-webkit-inner-spin-button {-webkit-appearance: none;    /* 去掉上下小箭头按钮 */}
+/* 设置输入框提示文字placeholder颜色 */
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #999;}
+input:-moz-placeholder, textarea:-moz-placeholder { color: #999;}
+
+/* 重用样式 */
+.border-box{ box-sizing: border-box; }
+.clearfix:after{ clear:both; height:0; display:block; visibility:hidden; content:"";}
+.clearfix{ *zoom:1}
+.fl{ float:left}
+.fr{ float:right}
+.overflow{ overflow:hidden}
+.none{ display:none}
+.block{ display:block}
+.inline{ display:inline}
+.relative{ position:relative}
+.b{ font-weight:700}
+.f12{ font-size:12px}
+.f13{ font-size:13px}
+.f14{ font-size:14px}
+.f15{ font-size:15px}
+.f16{ font-size:16px}
+.f17{ font-size:17px}
+.f18{ font-size:18px}
+.f20{ font-size:20px}
+.font-songti{ font-family:\5B8B\4F53}
+.font-arial{ font-family:Arial}
+.bg-white{ background-color:#fff}
+.text-hide{ display:block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis}
+
+/* padding, margin */
+.mt10{ margin-top: 10px;}
+.mt15{ margin-top: 15px;}
+.mt20{ margin-top: 20px;}
+.mt25{ margin-top: 25px;}
+.mt30{ margin-top: 30px;}
+.mt35{ margin-top: 35px;}
+
+/* line-height */
+.lh14{ line-height: 14px}
+.lh18{ line-height: 18px}
+.lh24{ line-height: 24px}
+.lh30{ line-height: 30px}
+
+/* color */
+.c-red{ color:#f00;}
+.c-deepgray{ color:#666}
+.c-gray{ color:#a9a9a9}
+.c-orange{ color: #ffa10f}
+.c-green{ color: #33cc66}
+.c-blue{ color: #0066ff}
+
+body{ font-size:12px; color:#333; background-color: #fff; font-family:"Microsoft YaHei", Arial, sans-serif; text-align:left;}
+#page{ width:100%; height:100%; position: relative;}

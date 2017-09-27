@@ -1,0 +1,28 @@
+@charset "utf-8";
+.login-container { width: 100%; position: relative; }
+.login-head{ height: 73px; border-bottom: 1px solid #e6e6e6;}
+.login-wrap{ width: 900px; margin: 0 auto}
+.login-logo{ float: left; padding-top: 20px; width: 125px;}
+.login-a{ display: block; width: 125px; height: 46px; background: url(../images/login/logo_login.png) 0 0 no-repeat;}
+.login-head-text{ float: right; padding-top: 47px;}
+.login-ad{ float: left; width: 600px; height: 330px; padding-top: 12px;}
+.login-content { float: left; width: 270px; padding-top: 60px; }
+.login-btm{ border-top: 1px solid #e6e6e6;}
+.login-copy{ padding: 15px 0 20px; text-align: center;}
+.verify-img{ float: left; width:85px; }
+.verify-text{ float: left; height: 36px; line-height: 36px; color: #ffa10f; font-size: 14px}
+.error-info { padding-top: 5px; color: red; text-align: right; }
+
+.login-group{ margin-bottom: 14px}
+.icon-login-company, .icon-login-user, .icon-login-pw{ background: url(../images/login/icon_login.png) no-repeat;}
+.icon-login-user{ background-position: 0 -20px;}
+.icon-login-pw{ background-position: 0 -40px;}
+
+.btm-mr{ margin-right: 13px;}
+.btm-link a{ margin: 0 15px; color: #999; font-size: 14px}
+.btm-link{ font-size: 9px}
+
+.login-ma-wrap{ width: 288px; margin: 0 auto;}
+.login-ma{ width: 100px; text-align: center; line-height: 30px}
+.login-ma img{ display: block;}
+
