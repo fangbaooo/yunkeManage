@@ -1,0 +1,458 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="email=no" />
+<link rel="stylesheet" type="text/css" href="../css/common/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/common/ui.css" />
+<link rel="stylesheet" type="text/css" href="../css/index.css" />
+<link rel="stylesheet" type="text/css" href="../css/pagination.css" />
+<script type="text/javascript" src="../js/angular.js"></script>
+<title>明源云客 - 全民营销</title>
+</head>
+<body>
+<div class="top">
+    <div class="wrap">
+        <div class="logo"></div><a href="javascript:;" class="top-icon toggle-side" id="toggleSide"></a>
+        <div class="fr">
+            <a class="top-link" href="#"><i class="top-icon top-icon-notice"></i>通知</a>
+            <a class="top-link" href="#"><i class="top-icon top-icon-help"></i>帮助</a>
+            <div class="top-split"></div>
+            <div class="top-avator"><img src="../images/icon/avator.png" alt=""></div>
+            <div class="top-userinfo">
+                <div class="top-userinfo-head"><span>系统管理员</span><i class="top-userinfo-arrow"></i></div>
+                <div class="top-userinfo-menu">
+                    <div class="top-userinfo-menu-list">
+                        <a href="#"><i class="top-icon top-icon-pw"></i>修改密码</a>
+                        <a href="#" class="lock"><i class="top-icon top-icon-lock"></i>锁定</a>
+                        <a href="#"><i class="top-icon top-icon-logout"></i>安全退出</a>
+                    </div>
+                    <i class="top-userinfo-menu-arrow"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="wrap clearfix">
+        <div class="side">
+            <div class="side-company"><img src="../images/pic/company/company.png" alt=""></div>
+            <div class="side-company-name c-deepgray">万科房地产集团有限公司</div>
+            <div class="nav">
+                <ul>
+                    <li><a href="" class="nav-a"><i class="icon-home"></i>首页</a></li>
+                    <li><a href="" class="nav-a"><i class="icon-book"></i>微楼书</a></li>
+                    <li><a href="" class="nav-a"><i class="icon-tuoke"></i>拓客中心</a></li>
+                    <li><a href="" class="nav-a"><i class="icon-ditch"></i>渠道管理</a></li>
+                    <li class="nav-on"><a href="" class="nav-a"><i class="icon-commission"></i>佣金管理</a>
+                        <ul class="nav-sub">
+                            <li class="nav-sub-on"><a href="#">个人佣金</a></li>
+                            <li><a href="#">个人奖励</a></li>
+                            <li><a href="#">机构佣金</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="nav-a"><i class="icon-customer"></i>首页</a></li>
+                    <li><a href="" class="nav-a"><i class="icon-finance"></i>微楼书</a></li>
+                    <li><a href="" class="nav-a"><i class="icon-data"></i>拓客中心</a></li>
+                    <li><a href="" class="nav-a"><i class="icon-020"></i>渠道管理</a></li>
+                    <li><a href="" class="nav-a"><i class="icon-set"></i>佣金管理</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="mt15 f14 clearfix">
+                <span class="fl lh30">选择具体项目：</span>
+                <div class="fl select" style="width:530px">
+                    <span class="select-border js-select">
+                        <input class="select-text" type="text" readonly value="" placeholder="">
+                        <span class="select-icon"><i class="select-icon-arrow"></i></span>
+                    </span>
+                    <div class="select-sub" ng-click="selectItem">
+                        <a href="javascript:;">POM</a>
+                        <a href="javascript:;">成本管理</a>
+                        <a href="javascript:;">CRM</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="toolbar f14 mt25">
+               <div class="toolbar-tab fl">
+                    <ul>
+                        <li class="toolbar-tab-on"><a href="">带看佣金</a></li>
+                        <li><a href="">认筹佣金</a></li>
+                        <li><a href="">成交佣金</a></li>
+                    </ul>
+                </div> 
+            </div>
+
+            <div class="tab f14 mt15 clearfix">
+                <ul>
+                    <li class="tab-on"><a href="">未审定</a></li>
+                    <li><a href="">待发放</a></li>
+                    <li><a href="">已发放</a></li>
+                </ul>
+                <div class="tab-bottom-line"></div>
+            </div>
+
+            <div class="search mt15 clearfix">
+                <div class="fl select" style="width:96px">
+                    <span class="select-border js-select">
+                        <input class="select-text" type="text" readonly value="" placeholder="客户姓名">
+                        <span class="select-icon"><i class="select-icon-arrow"></i></span>
+                    </span>
+                    <div class="select-sub">
+                        <a href="javascript:;">POM</a>
+                    </div>
+                </div>
+                <input type="text" class="input-text fl" placeholder="" id="" value="" style="width:470px">
+                <button class="fl btn" id="search">搜索</button>
+            </div>
+
+            <div class="checkbox-wrap mt20 clearfix">
+                <span class="broker-text" id="ddd">经纪人身份：</span>
+                <div class="broker-list">
+                    <a href="javascript:;" class="selected">老业主</a>
+                    <a href="javascript:;">地产公司员工</a>
+                    <a href="javascript:;">代理公司</a>
+                    <a href="javascript:;">自由经纪人</a>
+                    <a href="javascript:;">中介公司</a>
+                    <a href="javascript:;">合作伙伴</a>
+                    <a href="javascript:;">中介机构</a>
+                    <a href="javascript:;">其他</a>
+                </div>
+            </div>
+            <!-- tips -->
+            <div id="tips">
+                <div class="tips-wrap">
+                    <i class="tips-arrow"></i>
+                    <div class="tips-con clearfix">
+                        <div style="display:block">
+                            <div class="fl">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="cb1" value="1" name="cb1">
+                                    <label for="cb1">全部</label>
+                                </div>
+                            </div>
+                            <div class="tips-list clearfix">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="cb11" value="1" name="cb11">
+                                    <label for="cb11">我爱家园</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="cb12" value="2" name="cb11">
+                                    <label for="cb12">中原地产</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="cb13" value="1" name="cb11">
+                                    <label for="cb13">家家顺地产</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="cb14" value="1" name="cb11">
+                                    <label for="cb14">我爱家园</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="cb15" value="2" name="cb11">
+                                    <label for="cb15">中原地产</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="cb16" value="1" name="cb11">
+                                    <label for="cb16">家家顺地产</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="cb17" value="1" name="cb11">
+                                    <label for="cb17">我爱家园</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="cb18" value="2" name="cb11">
+                                    <label for="cb18">中原地产</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="cb19" value="1" name="cb11">
+                                    <label for="cb19">家家顺地产</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="mt35 clearfix">
+                <span class="fl lh30">申请结佣时间：</span>
+                <input type="text" class="input-text input-data fl" readonly value="">
+                <span class="fl lh30">&nbsp;&nbsp;-&nbsp;&nbsp;</span>
+                <input type="text" class="input-text input-data fl" readonly value="">
+            </div>
+
+            <div class="table-header mt20 clearfix">
+                <span class="fl lh30 f14">佣金列表</span>
+                <div class="fr btn-group">
+                    <a href="#" class="btn">查询</a><a href="#" class="btn">撤销审定</a><a href="#" class="btn">批量审定</a><a href="#" class="btn btn-green">导入修改信息</a><a href="#" class="btn btn-green">导出</a>
+                </div>
+            </div>
+            <div class="table-wrap mt10">
+                <table width="100%">
+                    <thead>
+                        <tr>
+                            <th>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="cAll" value="" name="cAll">
+                                    <label for="cAll">序号</label>
+                                </div>
+                            </th>
+                            <th>申请结佣时间</th>
+                            <th>客户信息</th>
+                            <th>经纪人信息</th>
+                            <th>成交房间信息</th>
+                            <th>成交佣金明细</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td height="80">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="c_1" value="" name="c_1">
+                                    <label for="c_1">1</label>
+                                </div>
+                            </td>
+                            <td>2015-02-02</td>
+                            <td>李乔（男）</td>
+                            <td class="lh14"><p>李乔（男）</p><p>1581099999</p>
+                                <p class="c-gray" style="margin-top:5px">身份：自由经纪人</p><p class="c-gray">证件号码：441323198506063303</p>
+                            </td>
+                            <td><p>普通住宅</p><p>1栋A - 102</p></td>
+                            
+                            <td class="lh18">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="c_1_1" value="" name="c_1_1">
+                                    <label for="c_1_1">第1笔：1000元</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="c_1_2" value="" name="c_1_2">
+                                    <label for="c_1_2">第2笔：1000元</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="c_1_3" value="" name="c_1_3">
+                                    <label for="c_1_3">第3笔：1000元</label>
+                                </div>
+                            </td>
+                            <td>
+                                <p><a href="#" class="c-orange">取消审定</a></p>
+                                <p><a href="#" class="c-orange">发放</a></p>
+                                <p><a href="#" class="c-orange">委托发放</a></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="80">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="c_2" value="" name="c_1">
+                                    <label for="c_2">2</label>
+                                </div>
+                            </td>
+                            <td>2015-02-02</td>
+                            <td>李乔（男）</td>
+                            <td class="lh14"><p>李乔（男）</p><p>1581099999</p>
+                                <p class="c-gray" style="margin-top:5px">身份：自由经纪人</p><p class="c-gray">证件号码：441323198506063303</p>
+                            </td>
+                            <td><p>普通住宅</p><p>1栋A - 102</p></td>
+                            
+                            <td class="lh18">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="c_1_1" value="" name="c_1_1">
+                                    <label for="c_1_1">第1笔：1000元</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="c_1_2" value="" name="c_1_2">
+                                    <label for="c_1_2">第2笔：1000元</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="c_1_3" value="" name="c_1_3">
+                                    <label for="c_1_3">第3笔：1000元</label>
+                                </div>
+                            </td>
+                            <td>
+                                <p><a href="#" class="c-orange">取消审定</a></p>
+                                <p><a href="#" class="c-orange">发放</a></p>
+                                <p><a href="#" class="c-orange">委托发放</a></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="80">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="c_3" value="" name="c_1">
+                                    <label for="c_3">2</label>
+                                </div>
+                            </td>
+                            <td>2015-02-02</td>
+                            <td>李乔（男）</td>
+                            <td class="lh14"><p>李乔（男）</p><p>1581099999</p>
+                                <p class="c-gray" style="margin-top:5px">身份：自由经纪人</p><p class="c-gray">证件号码：441323198506063303</p>
+                            </td>
+                            <td><p>普通住宅</p><p>1栋A - 102</p></td>
+                            
+                            <td class="lh18">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="c_1_1" value="" name="c_1_1">
+                                    <label for="c_1_1">第1笔：1000元</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="c_1_2" value="" name="c_1_2">
+                                    <label for="c_1_2">第2笔：1000元</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="c_1_3" value="" name="c_1_3">
+                                    <label for="c_1_3">第3笔：1000元</label>
+                                </div>
+                            </td>
+                            <td>
+                                <p><a href="#" class="c-orange">取消审定</a></p>
+                                <p><a href="#" class="c-orange">发放</a></p>
+                                <p><a href="#" class="c-orange">委托发放</a></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="no-data"><span>没有相关记录</span></div>
+            </div>
+            <div id="pagination" class="pagination">
+                <span class="fl text-indent">共计 <span class="c-orange">40</span> 条记录</span>
+                <span class="fr">共计 <span class="c-orange">4</span> 页，到第<input type="text" class="pagination-input" value="">页</span>
+                <span class="pagination-con fr">
+                    <span class="current prev"><i></i></span>
+                    <span class="current">1</span>
+                    <a href="#" class="">2</a>
+                    <span class="">...</span>
+                    <a href="#" class="">20</a>
+                    <a href="#" class="next"><i></i></a>
+                </span>
+            </div>
+
+            <!-- <div class="table-wrap mt10" id="listData">
+                <table width="100%">
+                    <thead>
+                        <tr>
+                            <th>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="cAll" value="" name="cAll">
+                                    <label for="cAll">序号</label>
+                                </div>
+                            </th>
+                            <th>申请结佣时间</th>
+                            <th>客户信息</th>
+                            <th>经纪人信息</th>
+                            <th>成交房间信息</th>
+                            <th>成交佣金明细</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                </table>
+                <div class="no-data"><span>没有相关记录</span></div>
+            </div> -->
+        </div>
+    </div>
+</div>
+<!-- footer 顶部 -->
+<div class="footer">
+    <div class="wrap footer-con">
+        <div class="ta-c c-gray">
+            <span class="btm-mr">Copyright &copy; 2015 明源云客</span>
+            <span class="btm-mr">房地产O2O营销解决方案</span>
+            <span class="btm-mr c-blue">400-6027-009转2</span>
+        </div>
+    </div>
+</div>
+<!-- tips -->
+<!-- <div class="pop-tips" style="width: 350px; left:370px; top:319px">
+    <div class="pop-tips-wrap">
+        <div class="pop-tips-con clearfix">
+            <div class="checkbox">
+                <input type="checkbox" id="cb1" value="1">
+                <label for="cb1">我爱家园</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="cb2" value="2">
+                <label for="cb2">中原地产</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="cb3" value="1">
+                <label for="cb3">家家顺地产</label>
+            </div>
+        </div>
+        <i class="pop-tips-arrow"></i>
+    </div>
+</div> -->
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>  
+
+<script type="text/javascript" src="../js/ui.js"></script>
+<script type="text/javascript">     
+    $(function(){
+        UI.init();
+        $("#search").click(function(){
+            UI.loading(null, "我爱家园我爱家园我爱家园", "false");
+            //UI.loading();
+            //UI.removeLoading();
+        });
+        $("#ddd").click(function(){
+            UI.loading();
+            //UI.loading();
+        });
+        $("#cAll").click(function(){
+            UI.checkToggle("cAll","c_1");
+        });
+        $("#cb1").click(function(){
+            UI.checkToggle("cb1","cb11");
+        });
+
+        $(".broker-list").on("click","a",function(){
+            $(".broker-list a").removeClass("selected");
+            $(this).addClass("selected");
+            UI.changeTipsArrow(this);
+        });
+
+        
+    });   
+
+
+    //     // var app = angular.module("myApp", []);
+
+    //     // app.controller("myCtrl", function($scope) {
+    //     //     $scope.data = {
+    //     //         dataList: {
+    //     //             a: 1,
+    //     //             b: 2,
+    //     //             c: 3
+    //     //         },
+    //     //         selected: 2
+
+
+    //     //     }
+    //     //     $scope.selectItem = function(){
+    //     //         alert(1)
+    //     //     };
+    //     //    // $scope.lastName = "Doe";
+    //     // });
+    // });
+
+        // function myCtrl($scope) {
+        //     $scope.data = {
+        //         dataList: {
+        //             a: 1,
+        //             b: 2,
+        //             c: 3
+        //         },
+        //         selected: 2
+
+
+        //     }
+        //     // $scope.selectItem = function(){
+        //     //     alert(1)
+        //     // };
+        // }   
+
+</script> 
+</body>
+</html>
+

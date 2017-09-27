@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="email=no" />
+<link rel="stylesheet" type="text/css" href="../css/common/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/common/ui.css" />
+<link rel="stylesheet" type="text/css" href="../css/index.css" />
+<script type="text/javascript" src="../js/angular.js"></script>
+<title>明源云客 - 全民营销</title>
+</head>
+<body ng-app="myApp">
+<div class="checkbox-wrap mt20 clearfix">
+    <span class="fl" id="ddd">经纪人身份：</span>
+    <div class="checkbox-list" ng-controller="myCtrl">
+        <div class="checkbox" ng-repeat="item in data">
+            <input type="checkbox" id="checkbox_{{$index + 1}}" value="">
+            <label for="checkbox_{{$index + 1}}" ng-bind="item"></label>
+        </div>
+    </div>
+    <div class="fl select" style="width:530px" ng-controller="select">
+        <span class="select-border js-select">
+            <input class="select-text" type="text" readonly value="" placeholder="" ng-model="data.selected">
+            <span class="select-icon"><i class="select-icon-arrow"></i></span>
+        </span>
+        <div class="select-sub">
+            <a href="javascript:;" ng-repeat="item in data.selectData" ng-click="selector()">{{item}}</a>
+        </div>
+    </div>
+</div>
+<!-- tips -->
+<!-- <div class="pop-tips" style="width: 350px; left:370px; top:319px">
+    <div class="pop-tips-wrap">
+        <div class="pop-tips-con clearfix">
+            <div class="checkbox checked-sub">
+                <input type="checkbox" id="cb1" value="1">
+                <label for="cb1">我爱家园</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="cb2" value="2">
+                <label for="cb2">中原地产</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="cb3" value="1">
+                <label for="cb3">家家顺地产</label>
+            </div>
+        </div>
+        <i class="pop-tips-arrow"></i>
+    </div>
+</div> -->
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>  
+
+<script type="text/javascript" src="../js/ui.js"></script>
+<script type="text/javascript">     
+    $(function(){
+        $("#cAll").click(function(){
+            UI.checkToggle("cAll","c_1");
+        });
+        UI.init()
+    });   
+
+
+    var app = angular.module("myApp", []);
+    app.controller("myCtrl", function($scope) {
+        $scope.data = ["老业主","地产公司员工","代理公司","地产公司员工11","代理公司22"];
+        $scope.selectItem = function(){
+            alert(1)
+        };
+    });
+    app.controller("select", function($scope) {
+        $scope.data= {
+            selectData: {
+                a: 1,
+                b: 2,
+                c: 3
+            },
+            selected: 22222
+        };
+        $scope.selector = function(){
+           // alert($scope.data.selected)
+        }
+    });
+ 
+
+</script> 
+</body>
+</html>
+

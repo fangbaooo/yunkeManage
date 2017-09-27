@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="email=no" />
+<link rel="stylesheet" type="text/css" href="../css/common/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/common/ui.css" />
+<link rel="stylesheet" type="text/css" href="../css/login.css" />
+<title>表单样式</title>
+</head>
+<body>
+    <!-- 内容 -->
+    <div class="" style="padding:20px">
+        <table width="100%">
+            <tr>
+              <td width="100" align="right" class="form-cell" valign="top"><span class="c-red">* </span>城市分组名称</td>
+              <td class="cell-split"><input type="text" name="" class="input-text fl mr10" value="" style="width:300px">
+                  <p class="c-red lh30">请填写城市分组名称</p></td>
+            </tr>
+            <tr>
+              <td width="73" align="right" class="form-cell" valign="top">城市分组名称</td>
+              <td class="cell-split"><input type="text" name="" class="input-text fl mr10" value="" style="width:300px">
+                  <p class="c-red lh30">请填写城市分组名称</p></td>
+            </tr>
+        </table>
+    </div>
+
+<!-- 知识库 -->
+<!-- <div class="f14" style="width:600px; padding:20px">
+    <table width="100%">
+        <tr>
+          <td width="100" align="right" class="form-cell" valign="top"><span class="c-red">* </span>类别名称：</td>
+          <td class="cell-split-s"><input type="text" name="" class="input-text fl mr10" value="" style="width:300px"><p class="c-gray lh30 f12">限制8个汉字</p>
+              <p class="c-red lh30 none">请填写类别名称</p></td>
+        </tr>
+    </table>
+</div> -->
+<div class="f14" style="width:850px; padding:20px">
+        <table width="100%">
+            <tr>
+              <td width="160" align="right" class="form-cell" valign="top">类别名称：</td>
+              <td class="cell-split-s"><p class="lh30">地产营销</p></td>
+            </tr>
+            <tr>
+              <td align="right" class="form-cell" valign="top"><span class="c-red">* </span>关键词：</td>
+              <td class="cell-split-s"><input type="text" name="" class="input-text fl mr10" value="" style="width:350px"><p class="c-gray lh30 f12">多个关键词请用空格隔开</p>
+                  <p class="c-red lh30">请填写关键词</p></td>
+            </tr>
+            <tr>
+              <td align="right" class="form-cell" valign="top"><span class="c-red">* </span>选择：</td>
+              <td class="cell-split-s">
+                <div class="fl select" style="width:350px">
+                    <span class="select-border js-select">
+                        <input class="select-text" type="text" readonly value="" placeholder="请选择">
+                        <span class="select-icon"><i class="select-icon-arrow"></i></span>
+                    </span>
+                    <div class="select-sub">
+                        <a href="javascript:;">aaaa</a>
+                        <a href="javascript:;">bbbb</a>
+                        <a href="javascript:;">ccc</a>
+                    </div>
+                </div><p class="c-red lh30 none">请填写城市分组名称</p></td>
+            </tr>
+            <tr>
+              <td align="right" class="form-cell" valign="top">显示图：</td>
+              <td class="cell-split-s">
+                  <div class="upload-wrap">
+                      <input type="file" style="display:none">
+                      <div class="upload-btn"><i class="upload-icon"></i></div>
+                      <!-- 上传的图片显示在这里 -->
+                      <!-- <img src="../images/pic/ad.jpg" alt="">  -->
+                  </div>
+                  <div class="fl lh30 mt20">
+                      <p class="c-gray f12">建议尺寸：640*180像素</p>
+                      <span class="c-blue f12 cursor">上传图片</span>
+                  </div>
+              </td>
+            </tr>
+            <tr>
+              <td align="right" class="form-cell" valign="top">多选：</td>
+              <td class="cell-split-s">
+                <div style="padding-top:5px">
+                  <div class="checkbox fl mr10">
+                      <input type="checkbox" id="cb11" name="cb11" checked>
+                      <label for="cb11">我爱家园</label>
+                  </div>
+                  <div class="checkbox fl mr10">
+                      <input type="checkbox" id="cb12" name="cb11">
+                      <label for="cb12">中原地产</label>
+                  </div>
+                  <div class="checkbox fl mr10">
+                      <input type="checkbox" id="cb13" name="cb11">
+                      <label for="cb13">家家顺地产</label>
+                  </div>
+
+                  <div class="checkbox fl mr10">
+                      <input type="checkbox" id="cb14" name="cb11" disabled="">
+                      <label for="cb14">不可选择</label>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td align="right" class="form-cell" valign="top">单选：</td>
+              <td class="cell-split-s">
+                <div style="padding-top:5px">
+                  <div class="radio fl mr10">
+                      <input type="radio" id="radio1" name="radio" checked>
+                      <label for="radio1">我爱家园</label>
+                  </div>
+                  <div class="radio fl mr10">
+                      <input type="radio" id="radio2" name="radio">
+                      <label for="radio2">中原地产</label>
+                  </div>
+
+                  <div class="radio fl mr10">
+                      <input type="radio" id="radio3" name="radio" disabled="">
+                      <label for="radio3">不可选择</label>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td align="right" class="form-cell" valign="top">详细页面是否展示封图：</td>
+              <td class="cell-split">
+                <div class="switch switch-on" style="margin-top:3px">
+                            <span class="switch-text">开</span>
+                            <span class="switch-white"></span>
+                        </div></td>
+            </tr>
+            <tr>
+              <td align="right" class="form-cell" valign="top">加减号：</td>
+              <td class="cell-split">
+                <div class="count-box" style="width:350px" id="count">
+                  <input class="input-text" type="text" value="3" placeholder="">
+                  <span class="count">
+                    <span class="count-up"><i></i></span>
+                    <span class="count-down"><i></i></span>
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td align="right" class="form-cell" valign="top">加减号2：</td>
+              <td class="cell-split">
+                <div class="count-box" style="width:350px" id="count2">
+                  <input class="input-text" type="text" value="30" placeholder="">
+                  <span class="count">
+                    <span class="count-up"><i></i></span>
+                    <span class="count-down"><i></i></span>
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td align="right" class="form-cell" valign="top">标题：</td>
+              <td class="cell-split-s"><input type="text" name="" class="input-text fl mr10" value="" style="width:350px">
+                  <p class="c-red lh30 none">请填写标题</p></td>
+            </tr>
+            <tr>
+              <td align="right" class="form-cell" valign="top">简介：</td>
+              <td class="cell-split-s"><textarea type="text" name="" class="fl textarea mr10" value="" style="width:350px; height:70px"></textarea><p class="c-gray lh30 f12" style="padding-top:45px">限制200个字符</p>
+                  </td>
+            </tr>
+            <tr>
+              <td align="right" class="form-cell" valign="top">图文详细页内容：</td>
+              <td class="cell-split-s"><textarea type="text" name="" class="fl textarea mr10" value="" style="width:350px; height:70px"></textarea>
+                  </td>
+            </tr>
+        </table>
+    </div>
+
+    <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../js/ui.js"></script>
+    <script type="text/javascript">        
+
+        $(function () {
+            UI.init();
+            UI.initCount("count");
+            UI.initCount("count2");
+
+    //         var str = "123.02";
+    // var match = str.match(/^\d+(\.\d{1,2})?$/)[0];
+    // alert(match);
+        });
+    </script> 
+</body>
+</html>
+

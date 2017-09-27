@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="email=no" />
+<link rel="stylesheet" type="text/css" href="../css/common/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/common/ui.css" />
+<title>明源云客 - loading</title>
+</head>
+<body>
+<div id="load1" style="height:400px"></div>
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>  
+<script type="text/javascript" src="../js/ui.js"></script>
+<script type="text/javascript">     
+    $(function(){
+        // 普通加载
+        UI.loading("load1");
+        // setTimeout(function(){ 
+        //         UI.removeLoading();
+        //     }, 3000
+        // );
+
+        // 成功提示
+        // setTimeout(function(){ 
+        //         UI.loading(null, "这是成功提示", "success");
+        //     }, 4000
+        // );
+        // setTimeout(function(){ 
+        //         UI.removeLoading();
+        //     }, 7500
+        // );
+
+        // // 成功失败
+        // setTimeout(function(){ 
+        //         UI.loading(null, "这是失败提示提示", "false");
+        //     }, 8000
+        // );
+        // setTimeout(function(){ 
+        //         UI.removeLoading();
+        //     }, 11000
+        // );
+
+        //UI.loading(null, "这是成功提示", "success");
+        //UI.loading(null, "这是失败", "false");
+        //UI.loading(null, "这是失败提示提示", "false");
+    });   
+</script> 
+</body>
+</html>
+

@@ -1,0 +1,4 @@
+@charset "utf-8";
+.pop-header{ height: 56px; border: 1px solid #ff7713;}
+.pop-header-text{ float: left; padding-left: 18px;}
+.pop-close{ float: right; width: 16px; height: 16px; margin: 15px 15px 0 0; background: url(../images/ddd.png) no-repeat}
